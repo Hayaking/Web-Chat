@@ -12,6 +12,8 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "element-ui": "^2.8.2",
+    "iview": "^3.4.2",
+    "jquery": "^3.0.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {

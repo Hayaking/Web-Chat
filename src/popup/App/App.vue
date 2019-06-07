@@ -1,33 +1,34 @@
 <template>
-  <el-card class="box-card">
-    <div
-      slot="header"
-      class="clearfix"
-    >
-      <span>卡片名称</span>
-      <el-button
-        style="float: right; padding: 3px 0"
-        type="text"
-      >操作按钮</el-button>
-    </div>
-    <div
-      v-for="o in 4"
-      :key="o"
-      class="text item"
-    >
-      {{'列表内容 ' + o }}
-    </div>
-  </el-card>
+    <Card class="box-card">
+        <div class="clearfix" slot="header">
+            <span>
+
+            </span>
+            <Button style="float: right; padding: 3px 0" type="text">
+                操作op
+            </Button>
+        </div>
+        <div :key="o" class="text item" v-for="o in 4">
+            {{'列表内容 ' + o }}
+        </div>
+    </Card>
 </template>
 
 <script>
-export default {
-  name: 'app',
-}
+    import {Card, Button} from 'element-ui';
+    export default {
+        name: 'app',
+        components:{Card, Button},
+        mounted() {
+            chrome.tabs.getSelected(null, function (tab) {
+                console.log(tab.url);
+            });
+        }
+    }
 </script>
 
 <style>
-.box-card {
-  width: 300px;
-}
+    .box-card {
+        width: 300px;
+    }
 </style>
