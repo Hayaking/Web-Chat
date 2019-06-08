@@ -16,8 +16,7 @@
             "*://*/*"
         ],
         "css": [
-            "css/options.css",
-            "css/popup.css"
+            "css/content.css"
         ],
         "js": [
             "js/content.js"

@@ -5,7 +5,5 @@ Vue.component("options", AppComponent);
 
 new Vue({
   el: "#app",
-  render: createElement => {
-    return createElement(AppComponent);
-  }
+  render: h => h(AppComponent)
 });

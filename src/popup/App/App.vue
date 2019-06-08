@@ -19,11 +19,6 @@
     export default {
         name: 'app',
         components:{Card, Button},
-        mounted() {
-            chrome.tabs.getSelected(null, function (tab) {
-                console.log(tab.url);
-            });
-        }
     }
 </script>
 
